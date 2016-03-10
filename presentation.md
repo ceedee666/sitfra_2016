@@ -9,13 +9,32 @@
 
 
 # Introduction
+- Björn Goerke' TECHED keynote
+- Goal:
+  - Try SAP HCP
+  - Apply function programming in a SAP scenario
+  - create super cool demo for #sitFRA
+
+
+
 <section data-background="images/iss.jpg">
+# Astro-Pi
 <img data-src="images/astropi.jpg">
+
+
 <img data-src="images/AstroPi-ISS.png">
 
 
+# Raspberry Pi Sense Hat
+- Sensors
+  - 3D accelerometer, 3D gyroscope and 3D magnetometer
+  - Barometric pressure and temperature sensor
+  - Relative humidity and temperature sensor
+- Input
+  - 5-button miniature joystick
+- Output
+  - 8×8 RGB LED matrix
 
-# Astro-Pi
 
 
 # Reading Sensor Data
