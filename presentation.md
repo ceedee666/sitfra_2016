@@ -9,7 +9,7 @@
 
 
 # Introduction
-<img data-src="images/iss.jpg">
+<section data-background="images/iss.jpg">
 <img data-src="images/astropi.jpg">
 <img data-src="images/AstroPi-ISS.png">
 
