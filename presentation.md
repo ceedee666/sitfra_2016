@@ -103,22 +103,13 @@ defmodule HCP.PressureSensorMessage do
   defstruct [:timestamp, :pressure, :temperature]
 end
 
+
 defmodule HCP.Message do
   @derive [Poison.Encoder]
 
   @pressure_sensor_message_type "8a750a776851a61d2b54"
 	
   defstruct [:messageType, :mode, :messages]
-
-  def new_pressure_sensor_message(pressure, temperature, timestamp) do
-    %HCP.Message{
-      messageType: @pressure_sensor_message_type,
-      mode: "sync",
-      messages: [%HCP.PressureSensorMessage{
-	           timestamp: timestamp,
-	           pressure: pressure,
-		   temperature: temperature}]}
-  end
 end
 ```
 
@@ -127,11 +118,10 @@ end
 ## Sending Data to HCP
 ``` Elixir
 def handle_info(:send_sensor_data, sm) do
-  ts = :os.system_time(:seconds)
   HCP.Message.new_pressure_sensor_message(
     Sensors.PressureSensor.get_pressure(sm.ps)
     Sensors.Pressureensor.get_temperature(sm.ps),
-    ts) |>
+    :os.system_time(:seconds)) |>
     Poison.encode! |>
     send_to_hcp
 		
@@ -144,9 +134,10 @@ defp send_to_hcp(message_body) do
   response = HTTPoison.post!("#{@iot_service_url}#{@device_id}",
 			     message_body,
 			     %{"Authorization" => "Bearer #{@oauth_token}", "Content-Type" => "application/json"})
-
-		Logger.debug "Message: #{inspect hsm}"
-		Logger.debug "Response: #{inspect response}"
 end
 ```
+
+
+
 # Demo
+<img data-src="images/demo.png">
