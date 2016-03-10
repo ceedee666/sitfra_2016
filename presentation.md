@@ -10,14 +10,12 @@
 
 # Introduction
 <img data-src="images/iss.jpg">
+<img data-src="images/astropi.jpg">
+<img data-src="images/AstroPi-ISS.png">
 
 
 
 # Astro-Pi
-<img data-src="images/astropi.jpg">
-
-
-<img data-src="images/AstroPi-ISS.png">
 
 
 # Reading Sensor Data
