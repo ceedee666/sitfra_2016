@@ -19,13 +19,14 @@
 
 # Astro-Pi
 <!-- .slide: data-background="images/iss.jpg" -->
-
 <img data-src="images/astropi.jpg">
 
 
+<!-- .slide: data-background="images/iss.jpg" -->
 <img data-src="images/AstroPi-ISS.png">
 
 
+<!-- .slide: data-background="images/iss.jpg" -->
 ## Raspberry Pi Sense Hat
 - Sensors
   - 3D accelerometer, 3D gyroscope and 3D magnetometer
