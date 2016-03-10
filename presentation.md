@@ -53,7 +53,7 @@ print("Humidity: %s %%rH" % humidity)
 
 
 ## Sensor Data Sheets
-<img data-src="images/registers2.png">
+<img data-src="images/registers3.png">
 
 
 ## Reading Sensors with Elixir 
