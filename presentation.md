@@ -18,14 +18,15 @@
 
 
 # Astro-Pi
-<section data-background="images/iss.jpg">
+<!-- .slide: data-background="images/iss.jpg" -->
+
 <img data-src="images/astropi.jpg">
 
 
 <img data-src="images/AstroPi-ISS.png">
 
 
-# Raspberry Pi Sense Hat
+## Raspberry Pi Sense Hat
 - Sensors
   - 3D accelerometer, 3D gyroscope and 3D magnetometer
   - Barometric pressure and temperature sensor
@@ -47,12 +48,14 @@ print("Humidity: %s %%rH" % humidity)
 ```
 
 
-# Sensor Data Sheets
-<img data-src="images/registers1.png">
+## Sensor Data Sheets
 <img data-src="images/registers1.png">
 
 
-# Reading Sensor with Elixir 
+<img data-src="images/registers2.png">
+
+
+## Reading Sensors with Elixir 
 ``` Elixir
 def init(:ok) do
   {:ok, pid} = I2c.start_link("i2c-1", @i2c_addr)
