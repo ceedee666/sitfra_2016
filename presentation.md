@@ -70,7 +70,6 @@ end
 
 ```
 
-## Reading Sensors with Elixir 
 ``` Elixir
 defp read_temperature(pid) do
   <<temperature::signed-size(16)>> = I2c.write_read(pid, <<0x2c>>, 1) <>
@@ -102,7 +101,6 @@ defmodule HCP.PressureSensorMessage do
 
   defstruct [:timestamp, :pressure, :temperature]
 end
-
 
 defmodule HCP.Message do
   @derive [Poison.Encoder]
