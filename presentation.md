@@ -95,7 +95,7 @@ end
 
 
 ## Model Messages in Elixir
-``` Elixir
+```Elixir
 defmodule HCP.PressureSensorMessage do
   @derive [Poison.Encoder]
 
@@ -104,7 +104,6 @@ end
 
 defmodule HCP.Message do
   @derive [Poison.Encoder]
-
   @pressure_sensor_message_type "8a750a776851a61d2b54"
 	
   defstruct [:messageType, :mode, :messages]
