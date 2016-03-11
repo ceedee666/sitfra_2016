@@ -111,7 +111,6 @@ end
 ```
 
 
-
 ## Sending Data to HCP
 ``` Elixir
 def handle_info(:send_sensor_data, sm) do
