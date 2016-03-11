@@ -11,7 +11,7 @@
 # Introduction
 - Björn Goerke's TECHED keynote
 - Goal:
-  - Try SAP HCP
+  - Try SAP HCP IoT service
   - Apply Elixir in a SAP scenario
   - Create super cool demo for #sitFRA
 
@@ -137,4 +137,4 @@ end
 
 
 # Demo
-<img data-src="images/demo.png">
+<!-- .slide: data-background="images/demo.png" -->
