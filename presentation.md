@@ -11,7 +11,7 @@
 # Introduction
 - Björn Goerke's TECHED keynote
 - Goal:
-  - Try SAP HCP
+  - Try SAP HCP IoT service
   - Apply Elixir in a SAP scenario
   - Create super cool demo for #sitFRA
 
@@ -70,7 +70,6 @@ end
 
 ```
 
-## Reading Sensors with Elixir 
 ``` Elixir
 defp read_temperature(pid) do
   <<temperature::signed-size(16)>> = I2c.write_read(pid, <<0x2c>>, 1) <>
@@ -96,17 +95,15 @@ end
 
 
 ## Model Messages in Elixir
-``` Elixir
+```Elixir
 defmodule HCP.PressureSensorMessage do
   @derive [Poison.Encoder]
 
   defstruct [:timestamp, :pressure, :temperature]
 end
 
-
 defmodule HCP.Message do
   @derive [Poison.Encoder]
-
   @pressure_sensor_message_type "8a750a776851a61d2b54"
 	
   defstruct [:messageType, :mode, :messages]
@@ -140,4 +137,4 @@ end
 
 
 # Demo
-<img data-src="images/demo.png">
+<!-- .slide: data-background="images/demo.png" -->
